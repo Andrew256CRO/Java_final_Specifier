@@ -1,0 +1,74 @@
+// Task 1
+/*public class TemaPb3 {
+    public static void main(String[] args) {
+
+       final int x=2;
+       x=5;//cannot assign a value to final variable 'x':5
+
+    }
+}*/
+
+// Task 2
+// Prin constructori(analog pentru functii), DECI prin metode.
+/*public class TemaPb3 {
+    final int x;
+    TemaPb3() {
+        System.out.println("Constructor TemaPb3");
+        x = 3;
+        System.out.println("Valoare x="+x);
+    }
+    public static void main(String[] args){
+        TemaPb3 ob1=new TemaPb3();
+        }
+}*/
+
+// Task 3
+// Prin constructori(analog pentru functii), DECI prin metode.
+public class TemaPb3 {
+    TemaPb3() {
+        System.out.println("Constructor TemaPb3");
+    }
+    public static void main(String[] args){
+        final TemaPb3 ob1=new TemaPb3();
+              TemaPb3 ob2=new TemaPb3();
+              ob1=ob2;//cannot assign a value to final variable 'ob1' :35
+        }
+}
+
+// Task 4
+// Pentru a opri mostenirea
+/*final public class TemaPb3 {
+    TemaPb3() {
+        System.out.println("Constructor TemaPb3");
+    }
+    public static void main(String[] args){
+
+        }
+}*/
+/*class ClasaMostenire extends TemaPb3{ // cannot inherit from final 'TemaPb3' :1
+
+}*/
+
+// Task 5
+// Imbunatateste claritatea codului si sporeste siguranta.
+/*public class TemaPb3 {
+    TemaPb3(final String s) {
+        System.out.println("Constructor TemaPb3");
+        System.out.println(s);
+    }
+    public static void main(String[] args){
+            TemaPb3 ob1= new TemaPb3("ADALKD");
+        }
+}*/
+
+// Task 6
+// Inseamna ca este o proprietate a clasei(nu o instantiere), DECI nu are treaba cu obiectele.
+/*public class TemaPb3 {
+    final static int x=3;
+    final static void print(){
+        System.out.println("Continut variabila x="+x);
+    }
+    public static void main(String[] args){
+        TemaPb3.print();
+        }
+}*/
